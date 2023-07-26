@@ -1,24 +1,12 @@
-julien@ubuntu:~/0x05$ cat 0-main.c
-#include "holberton.h"
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * reset_to_98 - function that takes a pointer to an integer parameter
+ * @n: integer pointer
+ * Return: 0 Success
  */
-int main(void)
-{
-    int n;
 
-    n = 402;
-    printf("n=%d\n", n);
-    reset_to_98(&n);
-    printf("n=%d\n", n);
-    return (0);
-}
-julien@ubuntu:~/0x05$ gcc -Wall -pedantic -Werror -Wextra 0-main.c 0-reset_to_98.c -o 0-98
-julien@ubuntu:~/0x05$ ./0-98 
-n=402
-n=98
-julien@ubuntu:~/0x05$ 
+void reset_to_98(int *n)
+{
+	*n = 98;
+} 
